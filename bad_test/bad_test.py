@@ -5,7 +5,7 @@ class Profiler(object):
         self._startTime = time.time()
          
     def __exit__(self, type, value, traceback):
-        print("Elapsed time: {:.3f} sec ".format(time.time() - self._startTime))
+        print("Time: {:.3f} sec ".format(time.time() - self._startTime))
 
 with Profiler() as p:
     array = open('10m.txt').read().split('\n')
